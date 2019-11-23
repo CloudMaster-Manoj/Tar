@@ -21,7 +21,7 @@
 #ifndef WIN32
 #include <unistd.h>
 #include <netinet/in.h>
-#include <sys/syscall.h>
+#include <sys/syscall.h>	
 #include <sys/select.h>
 #include <sys/socket.h>
 #include <sys/wait.h>
@@ -104,7 +104,7 @@ ff_server_main(void *arg) {
 			}
 		} while(0);
 		//
-		pthread_cancel_init();
+		int pthread_cancel_init();
 		if(pthread_create(&thread, NULL, rtspserver, &cs) != 0) {
 			close(cs);
 			ga_error("ffmpeg-server: cannot create service thread.\n");
