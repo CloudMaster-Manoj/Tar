@@ -6,7 +6,7 @@ OS_M	= $(OS).$(MACHINE)
 ifneq ($(OS_M),Linux.x86_64)
 TARGET	= periodic event-posix
 else
-TARGET	= periodic
+TARGET	= periodic event-posix
 endif
 
 all:
