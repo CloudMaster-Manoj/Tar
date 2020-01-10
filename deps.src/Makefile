@@ -126,7 +126,7 @@ x264:
 	rm -rf $(X264DIR)
 
 x265:
-	$(TGZUNPACK) $(X265)
+	$(TBZUNPACK) $(X265)
 	cd $(X265DIR)/build/linux; cmake \
 		-D CMAKE_INSTALL_PREFIX:PATH=$(GADEPS) \
 		-D CMAKE_CXX_FLAGS="-fPIC" -D CMAKE_C_FLAGS="-fPIC" \
